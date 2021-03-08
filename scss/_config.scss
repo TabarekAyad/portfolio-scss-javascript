@@ -1,5 +1,5 @@
-$primary-color: #fff;
-$secondary-color: rgb(250, 105, 15);
+$primary-color: #444;
+//$secondary-color: rgb(250, 105, 15);
 
 $show-home-image: true;
 $home-image: url(../img/background-image.jpg);
@@ -27,6 +27,23 @@ $background-opacity: 0.8;
         background: rgba($primary-color, $background-opacity);
       }
     }
+  }
+}
+
+// set text color
+@function set-text-color($p-color) {
+  @if (lightness($p-color) > 40) {
+    @return rgb(128, 70, 186);
+  } @else {
+    @return rgb(66, 245, 173);
+  }
+}
+// set secondary color
+@function set-secondary-color($p-color) {
+  @if (lightness($p-color) > 40) {
+    @return rgb(250, 105, 15);
+  } @else {
+    @return rgb(245, 66, 138);
   }
 }
 
