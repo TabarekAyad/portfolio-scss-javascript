@@ -112,6 +112,32 @@ main {
   }
 }
 
+// work/projects
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+  img {
+    width: 100%;
+    border: 3px solid $primary-color;
+    &:hover {
+      opacity: 0.5;
+      border-color: set-secondary-color($primary-color);
+      @include easeOut;
+    }
+  }
+}
+
+// button styles
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  background: set-secondary-color($primary-color);
+  color: $primary-color;
+}
+
 #main-footer {
   text-align: center;
   padding: 1rem;
